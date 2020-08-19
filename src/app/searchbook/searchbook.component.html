@@ -1,0 +1,23 @@
+
+<div class="container">
+<table class="table table-striped" *ngIf="result && result.length > 0">
+    <thead>
+    <tr>
+        <th>BOOK TITLE</th>
+        <th> AUTHOR</th>
+        <th> PRICE</th>
+        <th>PUBLISHED DATE</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of result">
+            <td> {{b.title}} </td>
+            <td> {{b.author}} </td>
+            <td>{{b.price}}</td>
+            <td> {{b.publishdate}} </td>
+            <td button class="btn btn-warning">Add to cart</td>
+        </tr>
+    </tbody>
+</table> 
+    <input type="button" value="Back" (click)="backClicked()" class="btn btn-primary"/>
+</div>

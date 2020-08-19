@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Bookstore"
+    }
+  },
+  "defaultProject": "Bookstore",
+  "cli": {
+    "analytics": false
+  }
 }

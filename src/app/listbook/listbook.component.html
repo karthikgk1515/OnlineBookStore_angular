@@ -1,0 +1,83 @@
+<body>
+    <div>
+        <span id="Categories" *ngFor="let c of category">
+         &nbsp;&nbsp; <input type="button" value="{{c.categoryame}}" (click)="getbookbycategory(c)" class="btn btn-light"/>
+        </span>
+     </div>
+     <br>
+  <div class="container">
+   <label class="col-sm-20 col-md-27 col-lg-10 mx-auto"><input required type="text" placeholder="Enter your book name"  name="title" [(ngModel)]="title" ngModel class="form-control"></label>
+
+    <input type="button" value="search" (click)="getbookbyname()" class="btn btn-primary" class="form-group"/>
+</div>
+
+<br><br>
+<div class="container" *ngIf="books && books.length>0">
+  <h1 align ="center">Recent published books</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+          <th>BOOK TITLE</th>
+          <th> AUTHOR</th>
+          <th> PRICE</th>
+          <th>PUBLISHED DATE</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let b of book1">
+              <td> {{b.title}} </td>
+              <td> {{b.author}} </td>
+              <td>{{b.price}}</td>
+              <td> {{b.publishdate}} </td>
+            <td button class="btn btn-warning">Add to cart</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<br>
+<div class="container">
+  <h1 align="center">Most popular books</h1>
+  <table class="table table-striped">
+      <thead>
+      <tr>
+          <th>BOOK TITLE</th>
+          <th> AUTHOR</th>
+          <th> PRICE</th>
+          <th>PUBLISHED DATE</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let b of book2">
+              <td> {{b.title}} </td>
+              <td> {{b.author}} </td>
+              <td>{{b.price}}</td>
+              <td> {{b.publishdate}} </td>
+              <td button class="btn btn-warning">Add to cart</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<br>
+<div class="container">
+  <h1 align="center">Best selling books</h1>
+  <table class="table table-striped">
+      <thead>
+      <tr>
+          <th>BOOK TITLE</th>
+          <th> AUTHOR</th>
+          <th> PRICE</th>
+          <th>PUBLISHED DATE</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let b of book3">
+              <td> {{b.title}} </td>
+              <td> {{b.author}} </td>
+              <td>{{b.price}}</td>
+              <td> {{b.publishdate}} </td>
+              <td button class="btn btn-warning">Add to cart</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+</body>
